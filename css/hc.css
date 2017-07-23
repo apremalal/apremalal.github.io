@@ -76,12 +76,12 @@ p
   transition:all .5s ease 0
 }
 
-.navbar 
+.navbar
 {
   display: none;
 }
 
-.navbar a 
+.navbar a
 {
   text-decoration: none;
   border-bottom: 1px #b1b1b1 solid;
@@ -91,7 +91,7 @@ p
 {
   margin-left:-250px;
   left:250px;
-  width:250px;
+  width:300px;
   background:#f8f8f8;
   position:fixed;
   height:100%;
@@ -715,7 +715,7 @@ time
 .inset {
   padding: 15px;
 }
-.navbar 
+.navbar
 {
   display: inherit;
   background-color: #ededed;
@@ -726,7 +726,7 @@ time
 
 @media screen and (max-width: 500px) {
   #welcome-greeting h2 {
-   font-size: 15px; 
+   font-size: 15px;
    transition: all 0.2s ease 0s;
    font-weight: 200;
    line-height: 30px;

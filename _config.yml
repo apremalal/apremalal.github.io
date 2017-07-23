@@ -1,16 +1,15 @@
-name: Herring Cove
-author: Herring Cove
-baseurl: 
+name: Regiland Valley
+author: Anuruddha Premalal
+baseurl:
 description: Anuruddha's Personal Blog
 github: http://www.github.com/apremalal
 twitter: http://www.twitter.com/apremalal
 facebook: http://www.facebook.com
-linkedin: http://www.linkedin.com
+linkedin: http://www.linkedin.com/in/apremalal/
 email: anuruddhapremalal[at]gmail.com
 location: 42°2'16"N   70°12'47"W
-disqus: diqus-username
+disqus: apremalal
 
-##Make sure to edit the above fields, especially for disqus.
 highlighter: rouge
 redcarpet:
   extensions: ["tables"]

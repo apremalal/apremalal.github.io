@@ -1,6 +1,6 @@
 name: Herring Cove
 author: Herring Cove
-baseurl: /
+baseurl: 
 description: Anuruddha's Personal Blog
 github: http://www.github.com/apremalal
 twitter: http://www.twitter.com/apremalal
@@ -11,7 +11,7 @@ location: 42°2'16"N   70°12'47"W
 disqus: diqus-username
 
 ##Make sure to edit the above fields, especially for disqus.
-highlighter: pygments
+highlighter: rouge
 redcarpet:
   extensions: ["tables"]
 

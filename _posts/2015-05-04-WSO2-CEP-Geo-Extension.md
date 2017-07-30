@@ -200,7 +200,7 @@ Execution plan
 
 WSO2 CEP uses execution plans to store event processing logic. An execution plan is bound to an instance of the Siddhi complex event processing runtime, which is responsible for the actual processing of the events. The event processor allows users to configure multiple execution plans thereby providing multiple isolated event processing environments per execution plan. Once the above custom function is deployed, the following execution plan can be used for the current example. From the provided UI, users can change this execution plan, and provide new values to the parameters, such as input/ output stream implementations, geo:iswithin parameters, etc.
 
-```
+## code
 <executionPlan xmlns="http://wso2.org/carbon/eventprocessor" name="isWithinCheckExePlan" statistics="enable" trace="enable">
    <description />
    <siddhiConfiguration>
@@ -215,7 +215,7 @@ WSO2 CEP uses execution plans to store event processing logic. An execution plan
       <stream name="isWithinOutputStream" valueOf="iswithinstream" version="1.0.0" />
    </exportedStreams>
 </executionPlan>
-```
+
 
 NOTE: Custom transformer
 

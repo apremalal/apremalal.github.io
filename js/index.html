@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        // self executing function here
+        /*
+        {
+    "photoset": {
+        "id": "72157698562777464",
+        "primary": "43338048652",
+        "owner": "49387364@N03",
+        "ownername": "apremalal",
+        "photo": [
+            {
+                "id": "43338048652",
+                "secret": "d39b94ecf0",
+                "server": "1787",
+                "farm": 2,
+                "title": "20140825_175214",
+                "isprimary": "1",
+                "ispublic": 1,
+                "isfriend": 0,
+                "isfamily": 0
+            },
+            {
+                "id": "43338048082",
+                "secret": "839a79f4c0",
+                "server": "1808",
+                "farm": 2,
+                "title": "DSC04653",
+                "isprimary": "0",
+                "ispublic": 1,
+                "isfriend": 0,
+                "isfamily": 0
+            },
+            {
+                "id": "43338046832",
+                "secret": "66ba8b1294",
+                "server": "1764",
+                "farm": 2,
+                "title": "DSC04709",
+                "isprimary": "0",
+                "ispublic": 1,
+                "isfriend": 0,
+                "isfamily": 0
+            }
+        ],
+        "page": 1,
+        "per_page": 500,
+        "perpage": 500,
+        "pages": 1,
+        "title": "kandalama",
+        "total": 3
+    },
+    "stat": "ok"
+}
+        */
+        (function () {
+
+            var album_ids = ["72157698562777464"]
+
+            var getAlbumUrls = function (ids) {
+                var res = {}
+                for (var j = 0; j < ids.length; j++) {
+                    $.ajax({
+                        url: "https://api.flickr.com/services/rest/",
+                        type: "get", //send it through get method
+                        async: true,
+                        data: {
+                            method: "flickr.photosets.getPhotos",
+                            photoset_id: ids[j],
+                            format: "json",
+                            nojsoncallback: 1,
+                            extras: "url_o",
+                            api_key: "fa03a82ebfe79e0fee06450a47a66cc7",
+                            api_sig: "ce0c67370a874bc998453ce647a291ec",
+                        },
+                        success: function (r) {
+                            var aURLs = {
+                                images: []
+                            }                            
+                            for (var i = 0; i < r.photoset.photo.length; i++) {
+                                var p = r.photoset.photo[i]
+                                //https://farm2.staticflickr.com/1764/43338046832_66ba8b1294_o.jpg
+                                //[url=https://flic.kr/p/292CPPy][img]https://farm2.staticflickr.com/1808/43338048082_9aac27d38f_o.jpg[/img][/url][url=https://flic.kr/p/292CPPy]DSC04653[/url] by [url=https://www.flickr.com/photos/apremalal/]Anuruddha Premalal[/url], on Flickr
+                                //var u = "https://farm" + p.farm + ".staticflickr.com/" + p.server + "/" + p.id + "_" + p.secret + "_c.jpg"
+                                var u = r.photoset.photo[i].url_o
+                                aURLs.images.push({src:u, h: parseInt(r.photoset.photo[i].height_o), w: parseInt(r.photoset.photo[i].width_o)})
+                            }
+                            res[r.photoset.title]= aURLs
+                            console.log(JSON.stringify(res))
+                        },
+                        error: function (xhr) {
+                            console.log(xhr)
+                        }
+                 });
+                }
+            }
+
+            x = getAlbumUrls(album_ids)
+
+
+
+        })();
+    </script>
+</body>
+
+</html>

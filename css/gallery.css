@@ -97,7 +97,7 @@
       display: flex;
       flex-flow: column wrap;
       width: 1170px;
-      height: 2650px;
+      height: 3350px;
       margin: 0 auto;
     }
   }
@@ -136,7 +136,7 @@
   @media (min-width: 1000px) {
     #timeline .demo-card {
       max-width: 450px;
-      height: 420px;
+      height: unset;
       margin: 90px;
       margin-top: 45px;
       margin-bottom: 65px;

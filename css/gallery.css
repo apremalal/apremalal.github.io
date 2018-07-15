@@ -71,7 +71,7 @@
   }
   
   #timeline {
-    padding: 100px 0;
+    padding: 20px 0 100px 0;
     background: #f7f7f7;
     border-top: 1px solid rgba(191, 191, 191, 0.4);
     border-bottom: 1px solid rgba(191, 191, 191, 0.4);
@@ -242,10 +242,10 @@
     border-color: #3ee9d1;
   }
   #timeline .demo-card--step3 {
-    background-color: #ce43eb;
+    background-color: #e982ff;
   }
   #timeline .demo-card--step3 .head::after {
-    border-color: #ce43eb;
+    border-color: #e982ff;
   }
   #timeline .demo-card--step4 {
     background-color: #4d92eb;
@@ -266,10 +266,10 @@
     border-color: #fa9332;
   }
   #timeline .demo-card--step7 {
-    background-color: #fa32a7;
+    background-color: #ff64bf;
   }
   #timeline .demo-card--step7 .head::after {
-    border-color: #fa32a7;
+    border-color: #ff64bf;
   }
   #timeline .demo-card--step9 {
     background-color: #46b8e9;

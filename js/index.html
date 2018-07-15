@@ -103,10 +103,20 @@
                  });
                 }
             }
-
             x = getAlbumUrls(album_ids)
 
-
+            var convertFlickrResponse = function(r){
+                var converted = {images:[]};
+                for(var i=0; i<r.photoset.photo.length ; i++){
+                    var p = r.photoset.photo[i]                    
+                    var u = r.photoset.photo[i].url_o
+                    converted.images.push({src:u, h: parseInt(r.photoset.photo[i].height_o), w: parseInt(r.photoset.photo[i].width_o)})
+                }
+                var res = {}
+                res[r.photoset.title] = converted;
+                console.log(JSON.stringify(res))
+                return res;
+            }
 
         })();
     </script>

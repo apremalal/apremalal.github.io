@@ -60,6 +60,11 @@
     order: 5;
   }
 
+  .demo-card:nth-child(10) {
+    order: 10;
+  }
+
+
   /* Border Box */
   * {
     box-sizing: border-box;
@@ -236,13 +241,13 @@
     border-color: #46b8e9;
   }
   #timeline .demo-card--step2 {
-    background-color: #3ee9d1;
+    background-color: #8af5e7;
   }
   #timeline .demo-card--step2 .head::after {
     border-color: #3ee9d1;
   }
   #timeline .demo-card--step3 {
-    background-color: #e982ff;
+    background-color: #e69df6;
   }
   #timeline .demo-card--step3 .head::after {
     border-color: #e982ff;
@@ -260,13 +265,13 @@
     border-color: #46b8e9;
   }
   #timeline .demo-card--step6 {
-    background-color: #fa9332;
+    background-color: #ecbc90;
   }
   #timeline .demo-card--step6 .head::after {
-    border-color: #fa9332;
+    border-color: #d6ad87;
   }
   #timeline .demo-card--step7 {
-    background-color: #ff64bf;
+    background-color: #ee89c4;
   }
   #timeline .demo-card--step7 .head::after {
     border-color: #ff64bf;
@@ -276,4 +281,10 @@
   }
   #timeline .demo-card--step9 .head::after {
     border-color: #46b8e9;
+  }
+  #timeline .demo-card--step10 {
+    background-color: #6fa5eb;
+  }
+  #timeline .demo-card--step10 .head::after {
+    border-color: #4d92eb;
   }
